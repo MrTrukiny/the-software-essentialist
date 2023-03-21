@@ -27,6 +27,14 @@ describe('Fizzbuzz', () => {
   });
 
   it('Throws an error when the number is lower than 1', () => {
-    expect(() => fizzbuzz(0)).toThrowError('Number must be greater than 0');
+    expect(() => fizzbuzz(0)).toThrowError(
+      'Number must be greater than 0 and less than 100'
+    );
+  });
+
+  it('Throws an error when the number is greater than 100', () => {
+    expect(() => fizzbuzz(101)).toThrowError(
+      'Number must be greater than 0 and less than 100'
+    );
   });
 });
