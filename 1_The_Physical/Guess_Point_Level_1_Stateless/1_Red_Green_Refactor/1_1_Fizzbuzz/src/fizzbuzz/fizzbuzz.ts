@@ -1,3 +1,7 @@
 export const fizzbuzz = (num: number) => {
-  return num.toString();
+  let result = num.toString();
+
+  if (num % 3 === 0) result = 'Fizz';
+
+  return result;
 };
